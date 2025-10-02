@@ -1,0 +1,13 @@
+---
+"COURSE": "CAU_OOP_2025"
+"ASSIGNMENT": "ASSIGNMENT_03"
+
+"ID": "20251234"
+"FILES":
+  - "YOUR-PATH-TO/assignment_03/Vector3d.cpp"
+  - "YOUR-PATH-TO/assignment_03/Vector3d.h"
+"PROBLEMS":
+  - "PROBLEM_01"
+  - "PROBLEM_02"
+  - "PROBLEM_03"
+  - "PROBLEM_04"
