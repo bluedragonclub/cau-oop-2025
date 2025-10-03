@@ -2,3 +2,5 @@
 
 - [과제#0: 파일 제출 테스트](https://github.com/bluedragonclub/cau-oop-2025/tree/main/assignment_00)
 - [과제#1: 간단한 수학 라이브러리 작성](https://github.com/bluedragonclub/cau-oop-2025/tree/main/assignment_01)
+- [과제#3: 3차원 벡터 구조체 및 함수 작성](https://github.com/bluedragonclub/cau-oop-2025/tree/main/assignment_02)
+- [과제#4: 3차원 벡터 클래스 작성](https://github.com/bluedragonclub/cau-oop-2025/tree/main/assignment_03)
