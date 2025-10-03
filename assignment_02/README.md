@@ -1,10 +1,8 @@
-
 # Assignment #02
-
 
 - In this assignment, we aim to implement some functionalities for vectors in 3-dimensional(3D) space.
 
-- The submission deadline is <span style="color:red">**October 14, 2024 at 23:59**</span>. 
+- The submission deadline is <span style="color:red">**October 15, 2025 at 23:59**</span>.
 
 - All declarations such as function prototypes, structures, etc should be written in **"vector3d.h"** header file, and function definitions (i.e., function bodies) should be written in **"vector3d.cpp"** source file.
 
@@ -16,51 +14,47 @@
 
 - Collaborate with your colleagues to write and share test cases in `main` function. <span style="color:red">**However, any plagiarism is not allowed.**</span> Plagiarism will be checked by automatic methods in the system.
 
-
 - Your files and codes might look like:
 
+  ```C++
+  // vector3d.h
+  #pragma once
 
-    ```C++
-    // vector3d.h
-    #pragma once
+  double vector3d_len(Vector3d v);
+  Vector3d vector3d_add(Vector3d v1, double c);
 
-    double vector3d_len(Vector3d v);
-    Vector3d vector3d_add(Vector3d v1, double c);
+  // omitted...
+  ```
 
-    // omitted...
-    ```
+  ```C++
+  // vector3d.cpp
+  #include "vector3d.h"
 
-    ```C++
-    // vector3d.cpp
-    #include "vector3d.h"
+  double vector3d_len(Vector3d v)
+  {
+      // Implement the function...
+  }
 
-    double vector3d_len(Vector3d v)
-    {
-        // Implement the function...
-    }
+  Vector3d vector3d_add(Vector3d v1, double c)
+  {
+  // Implement the function...
+  }
 
-    Vector3d vector3d_add(Vector3d v1, double c)
-    {
-    // Implement the function...
-    }
-    
-    // omitted...
-    ```
+  // omitted...
+  ```
 
-    ```C++
-    // DO NOT submit a source file that includes main() function.
-    // Use main() function only for your tests.
-    #include "vector3d.h"
+  ```C++
+  // DO NOT submit a source file that includes main() function.
+  // Use main() function only for your tests.
+  #include "vector3d.h"
 
-    int main()
-    {
-        // Write some test cases for verifying your codes...
+  int main()
+  {
+      // Write some test cases for verifying your codes...
 
-        return 0;
-    }
-    ```
-
-
+      return 0;
+  }
+  ```
 
 ## Problem (1)
 
@@ -68,6 +62,7 @@ Write a structure and functions for vectors in 3D space.
 The operations between a vector and a constant should be implemented as element-wise operations.
 
 #### (a) Define `Vector3d` structure in "vector3d.h" as follows.
+
 ```C++
 struct Vector3d
 {
@@ -87,8 +82,8 @@ $$
 \end{align*}
 $$
 
-    
 #### (b) Write `vector3d_len` function for `Vector3d` structure. [5pts]
+
 ```C++
 double vector3d_len(Vector3d v);
 ```
@@ -108,8 +103,8 @@ v = (1.0, 2.0, 3.0) \ &\rightarrow \  | v | = 3.7416573
 \end{align*}
 $$
 
-
 #### (c) Write `vector3d_add` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_add(Vector3d v, double c);
 ```
@@ -129,8 +124,8 @@ $$
 \end{align*}
 $$
 
-
 #### (d) Write `vector3d_sub` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_sub(Vector3d v, double c);
 ```
@@ -150,8 +145,8 @@ $$
 \end{align*}
 $$
 
-
 #### (e) Write `vector3d_sub` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_sub(double c, Vector3d v);
 ```
@@ -172,6 +167,7 @@ $$
 $$
 
 #### (f) Write `vector3d_mul` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_mul(Vector3d v, double c);
 ```
@@ -191,19 +187,17 @@ $$
 \end{align*}
 $$
 
-
 #### (g) Write `vector3d_div` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_div(Vector3d v, double c);
 ```
 
 The division of a vector and a constant is defined by the following equation:
 
-
 $$
 v \div c := (x \div c, \ y \div c, \ z \div c)
 $$
-
 
 These are some examples of how to calculate the division.
 
@@ -216,14 +210,13 @@ $$
 
 It is assumed that `c` is not 0.
 
-
 #### (h) Write `vector3d_div` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_div(double c, Vector3d v);
 ```
 
 The division of a vector and a constant is defined by the following equation:
-
 
 $$
 c \div v := (c \div x, \ c \div y, \ c \div z)
@@ -238,9 +231,10 @@ $$
 \end{align*}
 $$
 
-It is assumed that any element of a vector is not 0. 
+It is assumed that any element of a vector is not 0.
 
 #### (i) Write `vector3d_add` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_add(Vector3d v1, Vector3d v2);
 ```
@@ -254,16 +248,16 @@ $$
 This is an example of how to calculate the addition.
 
 $$
-v_1 = (1.0, 2.0, 3.0), \ v_2 = (2.0, 4.0, 6.0) 
-\ \rightarrow \ 
+v_1 = (1.0, 2.0, 3.0), \ v_2 = (2.0, 4.0, 6.0)
+\ \rightarrow \
 v_1 + v_2 = (3.0, 6.0, 9.0)\\
 $$
 
 #### (j) Write `vector3d_sub` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_sub(Vector3d v1, Vector3d v2);
 ```
-
 
 The subtraction between two vectors is defined by the following equation:
 
@@ -274,12 +268,13 @@ $$
 This is an example of how to calculate the subtraction.
 
 $$
-v_1 = (1.0, 2.0, 3.0), \ v_2 = (2.0, 4.0, 6.0) 
-\ \rightarrow \ 
+v_1 = (1.0, 2.0, 3.0), \ v_2 = (2.0, 4.0, 6.0)
+\ \rightarrow \
 v_1 - v_2 = (-1.0, -2.0, -3.0)\\
 $$
 
 #### (k) Write `vector3d_mul` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_mul(Vector3d v1, Vector3d v2);
 ```
@@ -294,17 +289,16 @@ This is an example of how to calculate the multiplication.
 
 $$
 v_1 = (1.0, 2.0, -3.0), \ v_2 = (-2.0, 4.0, 5.0)
-\ \rightarrow \ 
+\ \rightarrow \
 v_1 \cdot v_2 = (-2.0, 8.0, -15.0)\\
 $$
-
-
 
 ## Problem (2)
 
 Write functions for more advanced operations. The `Vector3d` structure is the same as that of **Problem (1)**.
 
 #### (a) Write `vector3d_inner` function for `Vector3d` structure. [5pts]
+
 ```C++
 double vector3d_inner(Vector3d v1, Vector3d v2);
 ```
@@ -319,12 +313,12 @@ This is an example of how to calculate the inner product.
 
 $$
 v_1 = (1, 2, -3), \ v_2 = (-2, 4, 5)
-\ \rightarrow \ 
+\ \rightarrow \
 v_1 \cdot v_2 = -2 + 8 -15 = -9\\
 $$
 
-
 #### (b) Write `vector3d_cross` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_cross(Vector3d v1, Vector3d v2);
 ```
@@ -339,19 +333,18 @@ This is an example of how to calculate the cross product.
 
 $$
 v_1 = (1, 2, -3), \ v_2 = (-2, 4, 5)
-\ \rightarrow \ 
+\ \rightarrow \
 v_1 \times v_2 = (22, 1, 8)\
 $$
 
-
 #### (c) Write `vector3d_angle` function for `Vector3d` structure. [5pts]
+
 ```C++
 double vector3d_angle(Vector3d v1, Vector3d v2, bool radian=true);
 ```
 
 This function calculates the angle between two vectors based on the formula of inner product.
-The unit of angle is radian if `radian` parameter is true, otherwise the unit of angle should be degree. 
-
+The unit of angle is radian if `radian` parameter is true, otherwise the unit of angle should be degree.
 
 <p align="center">
     <img src="fig01.jpg" width="400px">
@@ -373,14 +366,13 @@ To use $\pi$ value, define `pi` constant variable in "vector3d.cpp" as follows.
 const double pi = std::acos(-1));
 ```
 
-
 #### (d) Write `vector3d_indiv` function for `Vector3d` structure. [5pts]
 
 ```C++
 Vector3d vector3d_indiv(Vector3d v1, Vector3d v2, double m, double n);
-``` 
+```
 
-This function finds the internal division vector between two vectors with the ratio $m : n$. 
+This function finds the internal division vector between two vectors with the ratio $m : n$.
 
 <p align="center">
     <img src="fig02.jpg" width="220px">
@@ -399,17 +391,17 @@ This is an example of how to calculate the internal division.
 
 $$
 v_1 = (1, 2, -3), \ v_2 = (-2, 4, 5), \ m = 3, \ n = 2
-\ \rightarrow \ 
+\ \rightarrow \
 v_3 = (-0.8, 3.2, 1.8)
 $$
 
 #### (e) Write `vector3d_exdiv` function for `Vector3d` structure. [5pts]
+
 ```C++
 Vector3d vector3d_exdiv(Vector3d v1, Vector3d v2, double m, double n);
 ```
 
-This function finds the external division vector between two vectors with the ratio $m : n$. Note that there are two cases as follows. 
-
+This function finds the external division vector between two vectors with the ratio $m : n$. Note that there are two cases as follows.
 
 <p align="center">
     <img src="fig03.jpg" width="500px">
@@ -433,14 +425,14 @@ $$
 \end{align*}
 $$
 
-
 ## Problem (3)
 
 Write functions for dealting with the distance between two vectors.
 The `Vector3d` structure is the same as that of **Problem (1)**.
 The `n` parameter represents the number of elements in the array.
- 
+
 #### (a) Write `vector3d_distance` function that calculates the Euclidean distance between two vectors. [5pts]
+
 ```C++
 double vector3d_distance(Vector3d v1, Vector3d v2);
 ```
@@ -461,28 +453,36 @@ v_1 = (3, 0, 0), \ v_2 = (0, 0, 4) \ \rightarrow \ distance(v_1, v_2) = 5.0
 $$
 
 #### (b) Write `vector3d_nearest` function. [5pts]
+
 ```C++
 int vector3d_nearest(Vector3d v, Vector3d arr[], int n);
 ```
-This function finds the vector nearest to a given vector, and returns the index of an array. The index of the first element must be returned if the same vectors exists in the array. 
+
+This function finds the vector nearest to a given vector, and returns the index of an array. The index of the first element must be returned if the same vectors exists in the array.
 
 #### (c) Write `vector3d_farthest` function. [5pts]
+
 ```C++
 int vector3d_farthest(Vector3d v, Vector3d arr[], int n);
 ```
-This function finds the vector farthest to a given vector, and returns the index of an array. The index of the first element must be returned if the same vectors exists in the array. 
 
-####  (d) Write `vector3d_min_distance` function. [5pts]
+This function finds the vector farthest to a given vector, and returns the index of an array. The index of the first element must be returned if the same vectors exists in the array.
+
+#### (d) Write `vector3d_min_distance` function. [5pts]
+
 ```C++
 double vector3d_min_distance(Vector3d arr[], int n);
 ```
-This function calculates the minimum distance among all possible pairs of vectors. You need to initialize a variable for the minimum distance with the maximum possible value. 
 
-####  (e) Write `vector3d_max_distance` function. [5pts]
+This function calculates the minimum distance among all possible pairs of vectors. You need to initialize a variable for the minimum distance with the maximum possible value.
+
+#### (e) Write `vector3d_max_distance` function. [5pts]
+
 ```C++
 double vector3d_max_distance(Vector3d arr[], int n);
 ```
-This function calculates the maximum distance among all possible pairs of vectors. 
+
+This function calculates the maximum distance among all possible pairs of vectors.
 
 The following code shows an example of utilizing the distance functions:
 
@@ -526,4 +526,3 @@ int main() {
 
 }
 ```
-
